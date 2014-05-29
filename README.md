@@ -22,8 +22,8 @@ You can set the URL of your Piwik instance, and tracking ID of the site using th
     "plugins": ["piwik"],
     "pluginsConfig": {
         "piwik": {
-        	"URL": "www.example.com/piwik/"
-            "siteId": "UA-XXXX-Y"
+        	"URL": "www.example.com/piwik/",
+		"siteId": 1
         }
     }
 }
