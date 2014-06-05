@@ -4,7 +4,7 @@ require(["gitbook"], function(gitbook) {
     });
 
     gitbook.events.bind("page.change", function() {
-        ga('send', 'pageview');
+       _paq.push(['trackPageView']);
     });
 
     gitbook.events.bind("exercise.submit", function(e, data) {
