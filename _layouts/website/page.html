@@ -1,0 +1,30 @@
+{% extends template.self %}
+
+{% block javascript %}
+    {{ super() }}
+
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u=(('https:' == document.location.protocol) ? 'https' : 'http') + '://{{ config.pluginsConfig.piwik.URL }}';
+            // Ensure URL ends with slash
+            if (u.slice(-1) !== '/') u+='/';
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', {{ config.pluginsConfig.piwik.siteId }}]);
+            var d=document,
+                g=d.createElement('script'),
+                s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript';
+            g.defer=true;
+            g.async=true;
+            g.src=u+'piwik.js';
+            s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <noscript>
+        <p><img src="http://{{ config.pluginsConfig.piwik.URL }}piwik.php?idsite={{ config.pluginsConfig.piwik.siteId }}"
+                style="border:0;" alt="" /></p>
+    </noscript>
+{% endblock %}
