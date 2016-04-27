@@ -14,5 +14,19 @@
     "license": "Apache 2",
     "bugs": {
         "url": "https://github.com/emmanuel-keller/gitbook-plugin-piwik/issues"
+    },
+    "gitbook": {
+        "properties": {
+            "URL": {
+                "type": "string",
+                "description": "Piwik instance URL",
+                "required": true
+            },
+            "siteId": {
+                "type": "string",
+                "description": "Site Tracking ID",
+                "required": true
+            }
+        }
     }
 }
