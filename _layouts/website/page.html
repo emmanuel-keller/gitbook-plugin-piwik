@@ -9,6 +9,8 @@
         _paq.push(['enableLinkTracking']);
         (function() {
             var u=(('https:' == document.location.protocol) ? 'https' : 'http') + '://{{ config.pluginsConfig.piwik.URL }}';
+            // Ensure URL ends with slash
+            if (u.slice(-1) !== '/') u+='/';
             _paq.push(['setTrackerUrl', u+'piwik.php']);
             _paq.push(['setSiteId', {{ config.pluginsConfig.piwik.siteId }}]);
             var d=document,
