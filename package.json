@@ -23,7 +23,7 @@
                 "required": true
             },
             "siteId": {
-                "type": "string",
+                "type": "number",
                 "description": "Site Tracking ID",
                 "required": true
             }
