@@ -26,6 +26,18 @@
                 "type": "number",
                 "description": "Site Tracking ID",
                 "required": true
+            },
+            "jsPath": {
+                "type": "string",
+                "description": "Path of .js file",
+                "required": false,
+                "default": "piwik.js"
+            },
+            "phpPath": {
+                "type": "string",
+                "description": "Path of .php file",
+                "required": false,
+                "default": "piwik.php"
             }
         }
     }

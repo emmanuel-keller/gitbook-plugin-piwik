@@ -11,7 +11,7 @@
             var u=(('https:' == document.location.protocol) ? 'https' : 'http') + '://{{ config.pluginsConfig.piwik.URL }}';
             // Ensure URL ends with slash
             if (u.slice(-1) !== '/') u+='/';
-            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setTrackerUrl', u+'{{ config.pluginsConfig.piwik.phpPath }}']);
             _paq.push(['setSiteId', {{ config.pluginsConfig.piwik.siteId }}]);
             var d=document,
                 g=d.createElement('script'),
@@ -19,12 +19,12 @@
             g.type='text/javascript';
             g.defer=true;
             g.async=true;
-            g.src=u+'piwik.js';
+            g.src=u+'{{ config.pluginsConfig.piwik.jsPath }}';
             s.parentNode.insertBefore(g,s);
         })();
     </script>
     <noscript>
-        <p><img src="http://{{ config.pluginsConfig.piwik.URL }}piwik.php?idsite={{ config.pluginsConfig.piwik.siteId }}"
+        <p><img src="http://{{ config.pluginsConfig.piwik.URL }}{{ config.pluginsConfig.piwik.phpPath }}?idsite={{ config.pluginsConfig.piwik.siteId }}"
                 style="border:0;" alt="" /></p>
     </noscript>
 {% endblock %}
